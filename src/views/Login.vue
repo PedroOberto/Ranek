@@ -27,7 +27,12 @@ export default {
       }
     };
   },
-  // methods() {},
+  methods: {
+    logar() {
+      this.$store.dispatch("getUsuario", this.login.email);
+      this.$router.push({ name: "usuario" });
+    }
+  },
   components: {
     LoginCriar
   }
@@ -40,6 +45,7 @@ export default {
   margin: 0 auto;
   padding: 0 20px;
 }
+
 h1 {
   text-align: center;
   font-size: 2rem;
